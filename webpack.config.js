@@ -29,9 +29,9 @@ module.exports = {
     new CopyFilePlugin({
       patterns: [
         {
-          context: path.resolve(__dirname, "frontend/from_public"),
-          from: path.resolve(__dirname, "frontend/from_public/**/*"),
-          to: path.resolve(__dirname, "to_public/packs"),
+          context: path.resolve(__dirname, "assets"),
+          from: path.resolve(__dirname, "assets/**/*"),
+          to: path.resolve(__dirname, "dist/assets"),
         },
       ],
     }),
