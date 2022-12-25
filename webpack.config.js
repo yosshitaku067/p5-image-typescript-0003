@@ -1,5 +1,4 @@
 const path = require('path');
-const CopyFilePlugin = require("copy-webpack-plugin")
 
 module.exports = {
   mode: 'development',
@@ -24,16 +23,5 @@ module.exports = {
   devServer: {
     static: 'dist',
     open: true,
-  },
-  plugins: [
-    new CopyFilePlugin({
-      patterns: [
-        {
-          context: path.resolve(__dirname, "assets"),
-          from: path.resolve(__dirname, "assets/**/*"),
-          to: path.resolve(__dirname, "dist/assets"),
-        },
-      ],
-    }),
-  ]
+  }
 };
